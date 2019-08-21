@@ -1,0 +1,45 @@
+{
+ 
+    "development": {
+ 
+        "username": "vlad",
+ 
+        "password": "5",
+ 
+        "database": "sequelize_passport",
+ 
+        "host": "127.0.0.1",
+ 
+        "dialect": "mysql"
+ 
+    },
+ 
+    "test": {
+ 
+        "username": "vlad",
+ 
+        "password": "5",
+ 
+        "database": "",
+ 
+        "host": "",
+ 
+        "dialect": "mysql"
+ 
+    },
+ 
+    "production": {
+ 
+        "username": "vlad",
+ 
+        "password": "5",
+ 
+        "database": "",
+ 
+        "host": "127.0.0.1",
+ 
+        "dialect": "mysql"
+ 
+    }
+ 
+}

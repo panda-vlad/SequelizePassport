@@ -12,18 +12,9 @@ models.sequelize.sync().then(function() {
     console.log(err, "Something went wrong with the Database Update!")
 });
 
-//For Handlebars
-app.set('views', './app/views')
-app.engine('hbs', exphbs({
-    extname: '.hbs',
-    defaultLayout: 'main'
-}));
-app.set('view engine', '.hbs');
-
 app.get('/', function(req, res) {
     res.send('Welcome to Passport with Sequelize');
 });
-
 app.use(require('./app/routes/auth'))
 
 //For BodyParser
@@ -34,6 +25,18 @@ app.use(middlewares.cors);
 app.use(middlewares.setSession);
 app.use(middlewares.initialize);
 app.use(middlewares.passportSession);
+
+//For Handlebars
+app.set('views', './app/views')
+app.engine(
+    'hbs',
+    exphbs({
+       extname: "hbs",
+       defaultLayout: "",
+       layoutsDir: "",
+    })
+ );
+app.set('view engine', '.hbs');
 
 app.listen(3000, function(err) {
     if (!err)
